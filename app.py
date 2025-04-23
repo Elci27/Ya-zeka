@@ -2,7 +2,11 @@ import streamlit as st
 import lyricsgenius
 
 # Genius API
-genius = lyricsgenius.Genius("VEcy-gqfMEZ23a7KAfs3mhYtOozIHgAS9HeZ3NnLwRVLs5BnhCO7lB0jvYLd1xlI")
+genius = lyricsgenius.Genius(
+    "SWnMUIvIKVysC1Uswr-HU_at-_vWGIdk4-bBxUNAoYCFQY3RmNZE-_45Gi6Geoee",
+    headers={"User-Agent": "Mozilla/5.0"}
+)
+
 genius.skip_non_songs = True
 genius.excluded_terms = ["(Remix)", "(Live)"]
 genius.remove_section_headers = True
